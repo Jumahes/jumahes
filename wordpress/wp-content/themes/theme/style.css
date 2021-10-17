@@ -249,7 +249,7 @@ button::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
 	border-style: none;
-	padding: 0;
+	padding: O;
 }
 
 /**
@@ -402,7 +402,7 @@ input,
 select,
 optgroup,
 textarea {
-	color: #404040;
+	color: #000000;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -472,11 +472,11 @@ big {
 /* Elements
 --------------------------------------------- */
 body {
-	background: #fff;
+	background: rgb(255, 255, 255);
 }
 
 hr {
-	background-color: #ccc;
+	background-color: rgb(253, 250, 250);
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
@@ -533,17 +533,18 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+	color: #574f4f;
+	font-family: "Georgia", Georgia, serif;
 }
 
 a:visited {
-	color: #800080;
+	color: #4964ec;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #191970;
+	color: #6bb120;
 }
 
 a:focus {
@@ -626,7 +627,7 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-	color: #111;
+	color: rgb(0, 0, 0);
 }
 
 select {
@@ -660,7 +661,7 @@ textarea {
 }
 
 .main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 3px 3px rgba(7, 7, 7, 0.2);
 	float: left;
 	position: absolute;
 	top: 100%;
@@ -717,20 +718,12 @@ textarea {
 .site-main .comment-navigation,
 .site-main
 .posts-navigation,
-.site-main
-.post-navigation {
-	margin: 0 0 1.5em;
-}
-
-.comment-navigation .nav-links,
-.posts-navigation .nav-links,
+.site-mainju
 .post-navigation .nav-links {
 	display: flex;
 }
 
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
+.comment-navigation .nav-previous,ju{
 	flex: 1 0 50%;
 }
 
@@ -822,12 +815,7 @@ textarea {
 
 .wp-caption-text {
 	text-align: center;
-}
-
-/* Galleries
---------------------------------------------- */
-.gallery {
-	margin-bottom: 1.5em;
+}stom: 1.5em;
 	display: grid;
 	grid-gap: 1.5em;
 }
@@ -894,8 +882,7 @@ textarea {
 
 /*--------------------------------------------------------------
 # Utilities
---------------------------------------------------------------*/
-
+--------------------------------------------------site
 /* Accessibility
 --------------------------------------------- */
 
@@ -914,12 +901,12 @@ textarea {
 }
 
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
+	background-color: #c0e5f0;
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
 	clip-path: none;
-	color: #21759b;
+	color: #a9d7ec;
 	display: block;
 	font-size: 0.875rem;
 	font-weight: 700;
@@ -927,16 +914,15 @@ textarea {
 	left: 5px;
 	line-height: normal;
 	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000;
-}
+	text-decoration: none;nother WordPress site
 
-/* Do not show the outline on the skip link target. */
+    Sample Page
+}
+ip link target. */
 #primary[tabindex="-1"]:focus {
 	outline: 0;
 }
+
 
 /* Alignments
 --------------------------------------------- */
@@ -971,14 +957,47 @@ textarea {
 
 
 .site-header {
-	background: cornflowerblue;
+	background: rgb(255, 255, 255);
 	margin: 0;
 	display: flex;
 	gap:16px;
 	padding: 16px;
+	border-color: rgb(135, 224, 135);
+	
 }
 
 .site-branding{
 	display: flex;
 	gap:16px;
+}
+
+.wp-block-search{
+	background: rgb(132, 198, 231);
+	font-family: Arial, Helvetica, sans-serif;
+}
+.site{
+	background: rgb(225, 235, 221);
+}
+
+.site-description{
+	color:rgb(42, 57, 122);
+	font-family: Arial, Helvetica, sans-serif;
+}
+.wp-block-group{
+	color:rgb(78, 74, 74);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+::-moz-selection { /* Code for Firefox */
+	color: rgb(0, 0, 0);
+	background: rgb(68, 214, 112);
+  }
+h2{
+	color:rgb(0, 0, 0);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+}
+
+.wp-block-lastets-comments_comments-author{
+	color:rgb(78, 74, 74);;
 }
