@@ -1,0 +1,70 @@
+ {% extends 'pages/base.html' %} {% load static %} {% load i18n %} {% block body %}
+<!-- Main page -->
+<div class="container">
+    <hr>
+    <div class="row justify-content-center">
+        <h1>Our Courses</h1>
+        <!-- <h1>{% blocktrans %} Our Courses {% endblocktrans %}</h1> -->
+    </div>
+    <hr>
+
+    <p>
+        {% blocktrans %} Through our courses we help kids to discover the magic and beauty of technology {% endblocktrans %}
+    </p>
+
+
+
+    <br/><br/>
+    <div class="row">
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="{{ MEDIA_URL }}/codage.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">{% blocktrans %} Coding {% endblocktrans %}</h4>
+                    <p class="card-text">
+                        {% blocktrans %} In a fun and enjoyable way kids become familiar with the basic concepts of coding. They are going to discover different interfaces based on visual blocks with drag-and-drop functions where they will develop mini-games and create animations.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'pages:codage' %}" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="{{ MEDIA_URL }}/webdesign200x300.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Web Design</h4>
+                    <p class="card-text">This course teaches modern web design techniques, using HTML5 and CSS3</p>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'pages:webdesign' %}" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="{{ MEDIA_URL }}/logoparascolaire.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Introduction to Python</h4>
+                    <p class="card-text">
+                        {% blocktrans %} Students will be learn the basic of python, a programming language that is particularly suitable for beginners. They will use their creativity and imagination with the Turtle Graphics module. Students will also develop their writing skills
+                        on keyboard, a highly valued skill in programming.{% endblocktrans %}
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'pages:intropython' %}" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+{% endblock %}

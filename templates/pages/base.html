@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"> {% load static %} {% load i18n %}
+    <!-- copied from imar responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> {% block head %}
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <title>Jumahes</title>
+    {% endblock %}
+    <!-- Custom styles for this template -->
+    <link href="{% static 'pages/css/style.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'pages/css/icons.css' %}" rel="stylesheet" type="text/css">
+    <script src="{% static 'pages/js/myjs.js' %}"></script>
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="top-nav">
+                <!-- <div class="top2right"> -->
+                <div class="languages-dropdown">
+                    <button class="language-btn">
+                        <!-- <button class="language-btn">     -->
+
+                </button>
+                    <div class="languages-dropdown-content">
+                       
+                        <ul>
+                            <form action="" method="post">
+                                {% csrf_token %}
+                                <input name="next" type="hidden" value="{{ request.get_full_path }}" />
+                                <input name="language" type="hidden" value="{{ language.code }}" />
+                                <div class="dropdown-item"><input class="dropdown-item" type="submit" value="{{ language.name_local }} ({{ language.code }}) {% if language.code == LANGUAGE_CODE %}✓{% endif %}" />
+                            </form>
+                        </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- </div> -->
+                <!-- <div class="container"> -->
+                <!-- <img src="{{ MEDIA_URL }}/logo100x300.png" class="logo"> -->
+                <h1 class="logo">
+                    <a href="{% url 'pages:home' %}">Jumahes</a>
+                    <!-- <img src="{{ MEDIA_URL }}/logo100x300.png"> -->
+                </h1>
+                <nav>
+                    <ul>
+                        <li><a href="{% url 'pages:home' %}">HOME</a></li>
+                        <li><a href="{% url 'pages:about' %}">ABOUT</a></li>
+                        <li class="dropdown"><a href="#">SERVICES<span class="icon-caret-down"></span></a>
+                            <div class="dropdown-content">
+                                <a href="{% url 'pages:education' %}"><span class="icon-dot-single"></span>Education</a>
+                                <a href="{% url 'pages:training' %}"><span class="icon-dot-single"></span>Training</a>
+                                <a href="{% url 'pages:workshop' %}"><span class="icon-dot-single"></span>Workshops</a>
+                            </div>
+                        </li>
+                        <li><a href="{% url 'pages:contact' %}">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <!-- </div> -->
+
+            </div>
+    </header>
+
+    {% block body %}
+    <div>
+        <div>
+
+            <h1>Marlene Marchena</h1>
+            <p>
+                Aqui mi texto <a href="http://www.freewebsitetemplates.com/">Free Website Templates</a> for you, for free. You can replace all this text with your own text. You can remove any link to our website from this website template, you're free
+                to use this website template without linking back to us. If you're having problems editing this website template, then don't hesitate to ask for help on the <a href="http://www.freewebsitetemplates.com/forums/">Forums</a>.
+            </p>
+        </div>
+    </div>
+    {% endblock %}
+    <!-- Footer-->
+    <footer>
+        <p class="m-0 text-center text-white">Copyright &copy; Jumahes 2020. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>

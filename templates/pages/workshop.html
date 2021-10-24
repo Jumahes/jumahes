@@ -1,0 +1,61 @@
+{% extends 'pages/base.html' %} {% load static %} {% load i18n %} {% block body%}
+
+<div class="container">
+    <section>
+        <h3>
+            Android app development using MIT App Inventor
+        </h3>
+        <div class="workshop">
+            <img src="{{ MEDIA_URL }}/MITappInventor.jpg" class="mit-image">
+        </div>
+        <p>
+            <strong>Description:</strong>
+        </p>
+
+        <p>
+            {% blocktrans %} Joint us to learn how to create your first mobile app. With {% endblocktrans %}
+            <a href="https://appinventor.mit.edu/" target="_blank" title="MIT app inventor">
+                
+                MIT App Inventor
+            </a> ,{% blocktrans %}a programming environment based on visual blocks with drag-and-drop functions, app development becomes easy and fun to learn. Everyone, even kids can develop apps for smartphones and tablets. In this workshop
+            we are going to guide you through how to use APP Inventor to build an app from scratch. {% endblocktrans %}
+        </p>
+        <p>
+            <strong>Participants:</strong>
+        </p>
+        <p> Kids from 12 to 18 years old. This workshop has a LIMITED number of seats available (10).</p>
+        <p>
+            <strong>Requirements:</strong>
+        </p>
+        <div id="mylist">
+            <ul>
+                <li>Basic computer skills </li>
+                <li>A laptop, if you do not have a laptop please contact the organizers.</li>
+                <li>An Android phone or tablet (optional) </li>
+
+            </ul>
+        </div>
+
+        <p>
+            <strong>Date and Time:</strong>
+        </p>
+        <p>On April 14th - 17th from 9:00 a.m to 12:00 p.m</p>
+
+        <p>
+            <strong>Venue:</strong>
+        </p>
+        <p>
+            <strong>Price:</strong> Free
+        </p>
+
+        <p>
+            <strong>Sponsors:</strong>
+        </p>
+        <p>
+            <strong>Register Here</strong>
+        </p>
+
+
+    </section>
+</div>
+{% endblock %}
